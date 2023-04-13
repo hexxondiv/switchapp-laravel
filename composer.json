@@ -5,7 +5,17 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Hexxondiv\\SwitchappLaravel\\": "src/"
+            "Hexxondiv\\SwitchappLaravel\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hexxondiv\\SwitchappLaravel\\ServiceProvider"
+            ],
+            "aliases": {
+                "SwitchApp": "Hexxondiv\\SwitchappLaravel\\Facades\\SwitchAppService"
+            }
         }
     },
     "authors": [
@@ -14,5 +24,7 @@
             "email": "hexxondiv@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "orchestra/testbench": "^6.0"
+    }
 }
