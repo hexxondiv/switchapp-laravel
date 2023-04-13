@@ -46,9 +46,15 @@ class SwitchAppService
         return $this;
     }
 
-    public function verifyPayment($ref)
+    /**
+     * Verifies Switchapp payment using provided payment reference
+     * (i.e the tx_ref of a transaction)
+     * @param $tx_ref
+     * @return $this
+     */
+    public function verifyPayment($tx_ref)
     {
-        $this->result = $this->confirmSwitchAppPay($ref);
+        $this->result = $this->confirmSwitchAppPay($tx_ref);
         return $this;
     }
 
