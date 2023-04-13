@@ -11,7 +11,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Hexxondiv\\SwitchappLaravel\\ServiceProvider"
+                "Hexxondiv\\SwitchappLaravel\\SwitchAppServiceProvider"
             ],
             "aliases": {
                 "SwitchApp": "Hexxondiv\\SwitchappLaravel\\Facades\\SwitchAppService"
