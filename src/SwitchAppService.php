@@ -112,6 +112,13 @@ class SwitchAppService
         return $this;
     }
 
+    /**
+     * Returns the response payload for Wallet balance using
+     * provided currency.
+     * Where not provided, default currency is naira
+     * @param string $currency
+     * @return $this
+     */
     public function walletBalance($currency = 'NGN')
     {
         $this->result = $this->getSwitchAppWalletBalance($currency);
