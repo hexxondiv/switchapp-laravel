@@ -1,6 +1,7 @@
 <?php
 namespace Hexxondiv\SwitchappLaravel;
-use Hexxondiv\SwitchappLaravel\SwitchAppTrait;
+
+use Hexxondiv\SwitchappLaravel\Repositories\SwitchAppTrait;
 
 class SwitchAppService
 {

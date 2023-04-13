@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Hexxondiv\SwitchappLaravel;
+namespace Hexxondiv\SwitchappLaravel\Repositories;
 
 trait SwitchAppTrait
 {
