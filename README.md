@@ -12,29 +12,30 @@ To use this library, you'll first need to register @ [SwitchAppGo](https://switc
 
 1. Use Composer to install the library:
 
-    <code>composer require hexxondiv/switchapp-laravel</code>
+    `composer require hexxondiv/switchapp-laravel`
 
 2. Next, if you are using laravel <=v5.4 you'll need to add the following line to your config/app.php file::
 
-    <code>
+    
         'providers' =>
             [
                 ...
                 Hexxondiv\SwitchappLaravel\SwitchappLaravelServiceProvider::class,
             ],
-    </code>
+    
 
 3. Publish the configuration file:
 
-    <code>php artisan vendor:publish --provider="Hexxondiv\\SwitchappLaravel\\SwitchAppServiceProvider"
-    </code>
+    `php artisan vendor:publish --provider="Hexxondiv\\SwitchappLaravel\\SwitchAppServiceProvider"`
 4. Set your SwitchApp API credentials in the config/switchapp.php file.
 
 ### Usage
 1.  Import the SwitchAppService class:
+
     `use Hexxondiv\SwitchappLaravel\SwitchAppService;`
 
 2.  Create an instance of the SwitchAppService class:
+    
     `$switchAppService = new SwitchAppService($config);`
     
     Where `$config` is an array containing the following keys:
@@ -42,9 +43,12 @@ To use this library, you'll first need to register @ [SwitchAppGo](https://switc
     - `secret_key:` Your SwitchApp API secret key
     - `bvn:` Your Bank Verification Number (BVN)
 
-3.  Call one of the available methods on the SwitchAppService instance to interact with the SwitchApp API. For example:
+3.  Call one of the available methods on the SwitchAppService instance to interact with the SwitchApp API. 
+For example:
+    
     `$payment = $switchAppService->verifyPaymentByID('tx_473453045')->getResult();`
-    This code verifies a payment with the ID `tx_473453045` and stores the result in the $payment variable.
+    
+This code verifies a payment with the ID `tx_473453045` and stores the result in the $payment variable.
 
 ### Available Methods
    - `verifyPaymentByID($payment_id):` Verifies a payment by ID.
@@ -67,12 +71,7 @@ To use this library, you'll first need to register @ [SwitchAppGo](https://switc
    - `getAllClientTransactions($payload):` Retrieves all client transactions.
     
 All methods return a SwitchApp API response object. Call getResult() on the SwitchAppService instance to get the result of the last method call.
-   
-   
-   
-   
-
-
+  
 ### Contributing
 
 Contributions to this library are welcome! To contribute, please follow these steps:
