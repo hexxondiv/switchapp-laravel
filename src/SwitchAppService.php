@@ -37,10 +37,12 @@ class SwitchAppService
     }
 
     /**
-     * Verifies Switchapp payment using provided payment reference
+     * Verifies SwitchApp payment using provided payment reference
      * (i.e the tx_ref of a transaction)
      * @param $tx_ref
      * @return $this
+     * Get the Resulting response by calling the ->getResult() function
+     * Example $switchAppService->verifyPayment('SWP-798758979879')->getResult();
      */
     public function verifyPayment($tx_ref)
     {
@@ -140,19 +142,20 @@ class SwitchAppService
         return $this;
     }
 
-    public function getResult()
-    {
-        return $this->result;
-    }
-
     public function getDVATransactions($orderRef, $payload)
     {
         $this->result = $this->getCustomerDVATransactions($orderRef, $payload);
         return $this;
     }
+
     public function getAllClientTransactions($payload)
     {
         $this->result = $this->getCustomerTransactions($payload);
         return $this;
+    }
+
+    public function getResult()
+    {
+        return $this->result;
     }
 }
