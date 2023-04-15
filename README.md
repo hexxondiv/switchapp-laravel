@@ -7,7 +7,7 @@ A PHP library for integrating with the SwitchApp API.
 
 To use this library, you'll first need to register @ [SwitchAppGo](https://switchappgo.com), and then get your developer secret key and public keys from the  [developers page](https://dashboard.switchappgo.com/developers).
 
-###Installation
+### Installation
 
 
 1. Use Composer to install the library:
@@ -29,7 +29,7 @@ To use this library, you'll first need to register @ [SwitchAppGo](https://switc
     </code>
 4. Set your SwitchApp API credentials in the config/switchapp.php file.
 
-####Usage
+### Usage
 1.  Import the SwitchAppService class: 
     
     <code>use Hexxondiv\SwitchappLaravel\SwitchAppService;</code>
@@ -45,12 +45,10 @@ To use this library, you'll first need to register @ [SwitchAppGo](https://switc
 
 3.  Call one of the available methods on the SwitchAppService instance to interact with the SwitchApp API. For example:
 
-    <code>$payment = $switchAppService->verifyPaymentByID('tx_473453045')->getResult();
-</code>
-
+    `$payment = $switchAppService->verifyPaymentByID('tx_473453045')->getResult();`
 This code verifies a payment with the ID `tx_473453045` and stores the result in the $payment variable.
 
-###Available Methods
+### Available Methods
    - `verifyPaymentByID($payment_id):` Verifies a payment by ID.
    - `verifyPayment($tx_ref):` Verifies a payment by transaction reference.
    - `verifyTopUp($ref):` Verifies a top-up transaction by reference.
@@ -77,7 +75,8 @@ All methods return a SwitchApp API response object. Call getResult() on the Swit
    
 
 
-###Contributing
+### Contributing
+
 Contributions to this library are welcome! To contribute, please follow these steps:
 
 - Fork the repository
@@ -86,7 +85,7 @@ Contributions to this library are welcome! To contribute, please follow these st
 - Push your changes to your fork
 - Create a pull request to merge your changes into the main repository
 
-###License
+### License
 This library is licensed under the MIT license. See the _LICENSE_ file for more information.
 
 
