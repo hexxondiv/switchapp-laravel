@@ -23,8 +23,5 @@
             "name": "Hexxondiv",
             "email": "hexxondiv@gmail.com"
         }
-    ],
-    "require-dev": {
-        "orchestra/testbench": "^6.0"
-    }
+    ]
 }
