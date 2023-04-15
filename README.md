@@ -16,12 +16,13 @@ To use this library, you'll first need to register @ [SwitchAppGo](https://switc
 
 2. Next, if you are using laravel <=v5.4 you'll need to add the following line to your config/app.php file::
 
-    <code>'providers' => 
-    [
-          ...
-          Hexxondiv\SwitchappLaravel\SwitchappLaravelServiceProvider::class,
-      ],
-      </code>
+    <code>
+        'providers' =>
+            [
+                ...
+                Hexxondiv\SwitchappLaravel\SwitchappLaravelServiceProvider::class,
+            ],
+    </code>
 
 3. Publish the configuration file:
 
@@ -30,14 +31,13 @@ To use this library, you'll first need to register @ [SwitchAppGo](https://switc
 4. Set your SwitchApp API credentials in the config/switchapp.php file.
 
 ### Usage
-1.  Import the SwitchAppService class: 
-    
-    <code>use Hexxondiv\SwitchappLaravel\SwitchAppService;</code>
+1.  Import the SwitchAppService class:
+    `use Hexxondiv\SwitchappLaravel\SwitchAppService;`
 
 2.  Create an instance of the SwitchAppService class:
     `$switchAppService = new SwitchAppService($config);`
     
-    Where $config is an array containing the following keys:
+    Where `$config` is an array containing the following keys:
     - `public_key:` Your SwitchApp API public key
     - `secret_key:` Your SwitchApp API secret key
     - `bvn:` Your Bank Verification Number (BVN)
