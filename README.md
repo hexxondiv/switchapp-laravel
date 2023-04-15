@@ -35,18 +35,16 @@ To use this library, you'll first need to register @ [SwitchAppGo](https://switc
     <code>use Hexxondiv\SwitchappLaravel\SwitchAppService;</code>
 
 2.  Create an instance of the SwitchAppService class:
-    <code>$switchAppService = new SwitchAppService($config);
-</code>
+    `$switchAppService = new SwitchAppService($config);`
     
     Where $config is an array containing the following keys:
-    - public_key: Your SwitchApp API public key
-    - secret_key: Your SwitchApp API secret key
-    - bvn: Your Bank Verification Number (BVN)
+    - `public_key:` Your SwitchApp API public key
+    - `secret_key:` Your SwitchApp API secret key
+    - `bvn:` Your Bank Verification Number (BVN)
 
 3.  Call one of the available methods on the SwitchAppService instance to interact with the SwitchApp API. For example:
-
     `$payment = $switchAppService->verifyPaymentByID('tx_473453045')->getResult();`
-This code verifies a payment with the ID `tx_473453045` and stores the result in the $payment variable.
+    This code verifies a payment with the ID `tx_473453045` and stores the result in the $payment variable.
 
 ### Available Methods
    - `verifyPaymentByID($payment_id):` Verifies a payment by ID.
