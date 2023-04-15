@@ -56,7 +56,7 @@ trait SwitchAppTrait
         $this->base_url = 'https://api.switchappgo.com/v1';
         $this->public_key = $config['public_key'];
         $this->secret_key = $config['secret_key'];
-        $this->bvn = $config['bvn'];
+        $this->bvn = $config['bvn']??null;
         $this->pid = $config['pid'] ?? null;
 
         $this->get_all_endpoints = '';

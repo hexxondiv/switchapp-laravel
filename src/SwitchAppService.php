@@ -22,16 +22,6 @@ class SwitchAppService
     }
 
     /**
-     * @param $data
-     * @return $this
-     */
-    public function newBankAccount($data)
-    {
-        $this->result = $this->createOrUpdateAccount($data);
-        return $this;
-    }
-
-    /**
      * @param $payment_id
      * @return $this
      *
