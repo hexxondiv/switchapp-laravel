@@ -10,24 +10,10 @@ To use this library, you'll first need to register @ [SwitchAppGo](https://switc
 ### Installation
 
 
-1. Use Composer to install the library:
+- Use Composer to install the library:
 
-    `composer require hexxondiv/switchapp-laravel`
-
-2. Next, if you are using laravel <=v5.4 you'll need to add the following line to your config/app.php file::
-
-    
-        'providers' =>
-            [
-                ...
-                Hexxondiv\SwitchappLaravel\SwitchappLaravelServiceProvider::class,
-            ],
-    
-
-3. Publish the configuration file:
-
-    `php artisan vendor:publish --provider="Hexxondiv\\SwitchappLaravel\\SwitchAppServiceProvider"`
-4. Set your SwitchApp API credentials in the config/switchapp.php file.
+    ```shell script
+     composer require hexxondiv/switchapp-laravel
 
 ### Usage
 1.  Import the SwitchAppService class:
@@ -35,18 +21,19 @@ To use this library, you'll first need to register @ [SwitchAppGo](https://switc
     `use Hexxondiv\SwitchappLaravel\SwitchAppService;`
 
 2.  Create an instance of the SwitchAppService class:
+    ```php
+    $switchAppService = new SwitchAppService($config); 
     
-    `$switchAppService = new SwitchAppService($config);`
-    
-    Where `$config` is an array containing the following keys:
+   Where `$config` is an array containing the following keys:
     - `public_key:` Your SwitchApp API public key
     - `secret_key:` Your SwitchApp API secret key
     - `bvn:` Your Bank Verification Number (BVN)
 
-3.  Call one of the available methods on the SwitchAppService instance to interact with the SwitchApp API. 
+- Call any of the available methods on the SwitchAppService instance to interact with the SwitchApp API. 
 For example:
     
-    `$payment = $switchAppService->verifyPaymentByID('tx_473453045')->getResult();`
+    ```php
+    $payment = $switchAppService->verifyPaymentByID('tx_473453045')->getResult();
     
 This code verifies a payment with the ID `tx_473453045` and stores the result in the $payment variable.
 
